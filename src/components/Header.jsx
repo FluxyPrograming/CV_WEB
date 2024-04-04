@@ -1,5 +1,9 @@
+import { TextLogo } from "./Logo.jsx";
+
 export const Header = () => {
-  <>
-    <header></header>
-  </>;
+  return (
+    <header>
+      <TextLogo />
+    </header>
+  );
 };
