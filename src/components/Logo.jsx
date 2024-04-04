@@ -1,8 +1,8 @@
 export const TextLogo = () => {
   return (
     <svg
-      width="169"
-      height="89"
+      width="100"
+      height="50"
       viewBox="0 0 269 125"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
