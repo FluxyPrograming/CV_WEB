@@ -3,14 +3,22 @@ import { TextLogo } from "./Logo.jsx";
 export const Header = () => {
   return (
     <header className="">
-      <div className="p-2 bg-main-bg flex">
+      <div className="p-2 bg-main-bg flex border-b-2 border-b-main-text border-opacity-20">
         <TextLogo />
-        <div className="gap-10"></div>
-        <ul className="text-main-text content-center">
-          <li className="inline-block p-2">About me</li>
-          <li className="inline-block p-2">Experience</li>
-          <li className="inline-block p-2">My projects</li>
-          <li className="inline-block p-2">Reach me</li>
+        <div className="flex-grow"></div>
+        <ul className="text-main-text content-center flex justify-center align-middle text-center">
+          <li className=" p-2">
+            <a href="">About me</a>
+          </li>
+          <li className=" p-2">
+            <a href="">Experience</a>
+          </li>
+          <li className=" p-2">
+            <a href="">My projects</a>
+          </li>
+          <li className=" p-2">
+            <a href="">Reach me</a>
+          </li>
         </ul>
       </div>
     </header>
