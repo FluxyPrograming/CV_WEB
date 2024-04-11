@@ -1,23 +1,48 @@
+import { useState } from "react";
 import { TextLogo } from "./Logo.jsx";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
+gsap.registerPlugin(useGSAP);
 export const Header = () => {
+  const [style, setStyle] = useState("m-2 p-2 rounded-3xl bg-primary");
+
   return (
     <header className="">
       <div className="p-2 bg-main-bg flex border-b-2 border-b-main-text border-opacity-20">
         <TextLogo />
         <div className="flex-grow"></div>
-        <ul className="text-main-text content-center flex justify-center align-middle text-center">
-          <li className=" p-2">
+        <ul className="text-main-text content-center flex items-center">
+          <li className=" m-2 h-fit">
             <a href="">About me</a>
           </li>
-          <li className=" p-2">
+          <li className=" m-2">
             <a href="">Experience</a>
           </li>
-          <li className=" p-2">
+          <li className=" m-2">
             <a href="">My projects</a>
           </li>
-          <li className=" p-2">
-            <a href="">Reach me</a>
+          <li
+            id="contact"
+            className={style}
+            onMouseOver={() => {
+              gsap.to("#contact", {
+                duration: 0.35,
+                backgroundColor: "#61C0B3",
+                scale: 1.1,
+              });
+            }}
+            onMouseLeave={() => {
+              gsap.to("#contact", {
+                duration: 0.35,
+                backgroundColor: "#A4D0CA",
+                scale: 1,
+              });
+            }}
+          >
+            <a href="" className="m-2">
+              Reach me
+            </a>
           </li>
         </ul>
       </div>
