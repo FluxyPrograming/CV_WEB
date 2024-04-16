@@ -8,8 +8,8 @@ export const Header = () => {
   const [style, setStyle] = useState("m-2 p-2 rounded-3xl bg-primary");
 
   return (
-    <header className="">
-      <div className="p-2 bg-main-bg flex border-b-2 border-b-main-text border-opacity-20">
+    <header className="fixed w-dvw z-10">
+      <div className="p-2 bg-main-bg flex">
         <TextLogo />
         <div className="flex-grow"></div>
         <ul className="text-main-text content-center flex items-center">
