@@ -12,7 +12,7 @@ export const Header = () => {
       <div className="p-2 bg-main-bg flex">
         <TextLogo />
         <div className="flex-grow"></div>
-        <ul className="text-main-text content-center flex items-center">
+        <ul className="text-main-text content-center flex items-center mr-4">
           <li className=" m-2 h-fit">
             <a href="">About me</a>
           </li>
