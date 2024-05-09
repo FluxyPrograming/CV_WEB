@@ -2,8 +2,10 @@ import { useState } from "react";
 import { TextLogo } from "./Logo.jsx";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(useGSAP, ScrollToPlugin);
+
 export const Header = () => {
   const [style, setStyle] = useState("m-2 p-2 rounded-3xl bg-primary");
 
@@ -14,10 +16,32 @@ export const Header = () => {
         <div className="flex-grow"></div>
         <ul className="text-main-text content-center flex items-center mr-4">
           <li className=" m-2 h-fit">
-            <a href="">About me</a>
+            <a
+              className="cursor-pointer"
+              onClick={() => {
+                gsap.to(window, {
+                  duration: 1.25,
+                  scrollTo: { y: "#myProfile", offsetY: 50 },
+                  ease: "power3",
+                });
+              }}
+            >
+              About me
+            </a>
           </li>
           <li className=" m-2">
-            <a href="">Experience</a>
+            <a
+              className="cursor-pointer"
+              onClick={() => {
+                gsap.to(window, {
+                  duration: 1.25,
+                  scrollTo: { y: "#technologies", offsetY: 50 },
+                  ease: "power3",
+                });
+              }}
+            >
+              Technologies
+            </a>
           </li>
           <li className=" m-2">
             <a href="">My projects</a>
