@@ -12,7 +12,18 @@ export const Header = () => {
   return (
     <header className="fixed w-dvw z-10">
       <div className="p-2 bg-main-bg flex">
-        <TextLogo />
+        <a
+          className="cursor-pointer"
+          onClick={() => {
+            gsap.to(window, {
+              duration: 1.25,
+              scrollTo: 0,
+              ease: "power3",
+            });
+          }}
+        >
+          <TextLogo />
+        </a>
         <div className="flex-grow"></div>
         <ul className="text-main-text content-center flex items-center mr-4">
           <li className=" m-2 h-fit">
@@ -35,7 +46,7 @@ export const Header = () => {
               onClick={() => {
                 gsap.to(window, {
                   duration: 1.25,
-                  scrollTo: { y: "#technologies", offsetY: 50 },
+                  scrollTo: { y: "#technologies", offsetY: -20 },
                   ease: "power3",
                 });
               }}
