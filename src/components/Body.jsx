@@ -22,7 +22,7 @@ export const Body = () => {
         <MyProfile />
       </section>
       <section
-        id="experience"
+        id="technologies"
         className="bg-main-bg text-main-text min-h-dvh z-0 flex flex-col"
       >
         <Technologies />
