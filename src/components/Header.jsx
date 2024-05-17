@@ -32,7 +32,7 @@ export const Header = () => {
               onClick={() => {
                 gsap.to(window, {
                   duration: 1.25,
-                  scrollTo: { y: "#myProfile", offsetY: 50 },
+                  scrollTo: { y: "#myProfile", offsetY: 60 },
                   ease: "power3",
                 });
               }}
@@ -55,27 +55,44 @@ export const Header = () => {
             </a>
           </li>
           <li className=" m-2">
-            <a href="">My projects</a>
+            <a
+              className="cursor-pointer"
+              onClick={() => {
+                gsap.to(window, {
+                  duration: 1.25,
+                  scrollTo: { y: "#projects", offsetY: -20 },
+                  ease: "power3",
+                });
+              }}
+            >
+              My projects
+            </a>
           </li>
-          <li
-            id="contact"
-            className={style}
-            onMouseOver={() => {
-              gsap.to("#contact", {
-                duration: 0.35,
-                backgroundColor: "#61C0B3",
-                scale: 1.1,
-              });
-            }}
-            onMouseLeave={() => {
-              gsap.to("#contact", {
-                duration: 0.35,
-                backgroundColor: "#A4D0CA",
-                scale: 1,
-              });
-            }}
-          >
-            <a href="" className="m-2">
+          <li id="contAnim" className={style}>
+            <a
+              className="m-2 cursor-pointer"
+              onClick={() => {
+                gsap.to(window, {
+                  duration: 1.25,
+                  scrollTo: { y: "#contact", offsetY: -20 },
+                  ease: "power3",
+                });
+              }}
+              onMouseOver={() => {
+                gsap.to("#contAnim", {
+                  duration: 0.35,
+                  backgroundColor: "#61C0B3",
+                  scale: 1.1,
+                });
+              }}
+              onMouseLeave={() => {
+                gsap.to("#contAnim", {
+                  duration: 0.35,
+                  backgroundColor: "#A4D0CA",
+                  scale: 1,
+                });
+              }}
+            >
               Reach me
             </a>
           </li>
