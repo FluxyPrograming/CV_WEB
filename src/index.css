@@ -6,4 +6,30 @@
 
 :root {
   font-synthesis-weight: none;
+  --main-bg: #040606;
+  --primary: #a4d0ca;
+  --accent: #61c0b3;
+}
+
+body::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px 10px var(--main-bg);
+  border: solid 10px var(--main-bg);
+}
+
+body::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 10px 10px var(--primary);
+  border: solid 8px var(--main-bg);
+  border-radius: 2rem;
+}
+body::-webkit-scrollbar-thumb:hover {
+  box-shadow: inset 0 0 10px 10px var(--accent);
+}
+
+body::-webkit-scrollbar-button {
+  background-color: var(--main-bg);
+  height: 60px;
 }
