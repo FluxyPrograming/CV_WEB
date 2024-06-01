@@ -13,7 +13,7 @@ export const Body = () => {
     <>
       <section
         id="entrance"
-        className="bg-main-bg text-main-text min-h-dvh z-0 flex flex-col"
+        className="bg-main-bg text-main-text min-h-dvh z-0 flex flex-col overflow-hidden"
       >
         <EnterAnimation />
       </section>

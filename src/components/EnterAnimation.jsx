@@ -1,31 +1,24 @@
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useIntersection } from "../hooks/useIntersection";
-import { useRef, useEffect } from "react";
 
 gsap.registerPlugin(useGSAP);
 
-const enterAnimation = () => {
-  const t1 = gsap.timeline({ repeat: 0 });
-  t1.to("#enter", { scaleY: 4 });
-};
-
 export const EnterAnimation = () => {
-  const triggerRef = useRef(null);
-  const isVisible = useIntersection(triggerRef, "0px");
+  let tl = gsap.timeline();
 
-  useEffect(() => {
-    if (isVisible) {
-      enterAnimation();
-    }
-  }, [enterAnimation, isVisible]);
+  tl.to("#enter", {
+    scale: 1.8,
+    duration: 1,
+  });
+  tl.to("#enter", {});
+
   return (
     <>
-      <div
-        ref={triggerRef}
-        id="enter"
-        className="m-auto bg-primary h-40 w-3/5 rounded-xl"
-      ></div>
+      <div id="enter" className="m-auto font-general font-bold text-6xl">
+        <p className="block">HI, I'M LUKA</p>
+        <p className="block text-main-bg">HI, I'M LUKA</p>
+        <p className="block">HI, I'M LUKA</p>
+      </div>
     </>
   );
 };
