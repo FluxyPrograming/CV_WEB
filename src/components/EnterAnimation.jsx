@@ -8,9 +8,8 @@ export const EnterAnimation = () => {
 
   tl.to("#enter", {
     scale: 1.8,
-    duration: 1,
+    duration: 1.5,
   });
-  tl.to("#enter", {});
 
   return (
     <>
