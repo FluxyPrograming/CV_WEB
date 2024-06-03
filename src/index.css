@@ -9,6 +9,7 @@
   --main-bg: #040606;
   --primary: #a4d0ca;
   --accent: #61c0b3;
+  --secondary: #337067;
 }
 
 body::-webkit-scrollbar {
@@ -32,4 +33,13 @@ body::-webkit-scrollbar-thumb:hover {
 body::-webkit-scrollbar-button {
   background-color: var(--main-bg);
   height: 60px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--accent);
+  font-weight: bold;
+}
+#ndIn::placeholder {
+  color: var(--secondary);
 }
