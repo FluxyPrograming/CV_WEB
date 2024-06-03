@@ -6,11 +6,16 @@ export const MyProfile = () => {
           - MY PROFILE -
         </h1>
         <div className="flex gap-40 mt-20 mb-20">
-          <img
-            src="https://via.placeholder.com/800x950"
-            className="justify-self-start rounded-r-xl"
-            alt=""
-          />
+          <div
+            src="/new_pfp_giga.jpg"
+            className="justify-self-start rounded-r-xl w-[1200px] h-[1200px]"
+            style={{
+              backgroundImage: "url(/new_pfp_giga.jpg)",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+
           <div className="flex flex-col w-[40dvw]">
             <pre className="text-4xl font-grotesk">
               {"A brief intro ...\n"}
