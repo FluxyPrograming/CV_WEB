@@ -7,16 +7,16 @@ export const Technologies = () => {
           - TECHNOLOGIES -
         </h1>
 
-        <div className="flex gap-40 ml-[25dvw] mt-20 mb-20">
+        <div className="flex gap-[20dvw] ml-[25dvw] mt-20 mb-20">
           <div>
             <h2 className="text-4xl font-grotesk">
               My tech <span className="font-extrabold text-accent">stack</span>
             </h2>
             <p className="w-[25dvw] font-general text-xl">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
-              dignissimos voluptates numquam recusandae ullam cupiditate
-              asperiores possimus harum obcaecati incidunt? Facere nam omnis
-              accusantium voluptas odio eos cumque beatae ullam!
+              I have learned many skills over the years. I have the most
+              experience in Python and JavaScript, while still being comfortable
+              with the other ones. I learn new languages and adapt to changes
+              quickly.
             </p>
           </div>
           <div>
