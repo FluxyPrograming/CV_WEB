@@ -11,7 +11,7 @@ export const Header = () => {
 
   return (
     <header className="fixed w-dvw z-10">
-      <div className="p-2 bg-main-bg flex">
+      <div className="p-2 bg-main-bg ml-[10px] flex">
         <a
           className="cursor-pointer"
           onClick={() => {
